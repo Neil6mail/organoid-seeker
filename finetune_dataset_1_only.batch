@@ -1,0 +1,12 @@
+#!/bin/bash 
+
+#SBATCH --job-name=finetuning_medsam
+#SBATCH --nodes=1
+#SBATCH --partition=gpu_prod_long
+#SBATCH --time=24:00:00
+#SBATCH --output=logslurms/train_dataset1_30epochs%j.out
+#SBATCH --error=logslurms/train_dataset1_30epochs%j.err
+#SBATCH --mail-user=adamskbest@gmail.com
+#SBATCH --mail-type=ALL
+
+python train_dataset1.py
